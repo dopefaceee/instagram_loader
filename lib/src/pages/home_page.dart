@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:instagram_loader/src/notifiers/instagram_provider.dart';
 import 'package:instagram_loader/src/notifiers/instagram_state.dart';
+import 'package:instagram_loader/src/utils/debouncer.dart';
 
 class HomePage extends StatelessWidget {
+  final TextEditingController igUsername = TextEditingController();
+
+  final Debouncer onSearchDebouncer =
+      Debouncer(delay: Duration(milliseconds: 500));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +21,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             TextField(
+              controller: igUsername,
               decoration: InputDecoration(hintText: 'Enter instagram id'),
               onChanged: (value) {
-                context
-                    .read(igLoaderProvider)
-                    .getInstagramData(username: '$value');
+                onSearchDebouncer.debounce(() {
+                  context
+                      .read(igLoaderProvider)
+                      .getInstagramData(username: '$value');
+                });
               },
             ),
             SizedBox(
