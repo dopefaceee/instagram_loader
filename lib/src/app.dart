@@ -7,6 +7,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ProviderScope(
       child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: Color(0xFF23242e),
+        ),
         home: HomePage(),
       ),
     );

@@ -7,12 +7,13 @@ class User {
   String biography;
   @JsonKey(name: 'external_url')
   String externalUrl;
-  // @JsonKey(name: 'edge_followed_by')
-  // bool edgeFollowedBy;
-  // @JsonKey(name: 'edge_follow')
-  // bool edgeFollow;
+  @JsonKey(name: 'edge_followed_by')
+  EdgeFollowedBy edgeFollowedBy;
+  @JsonKey(name: 'edge_follow')
+  EdgeFollow edgeFollow;
   @JsonKey(name: 'full_name')
   String fullName;
+  String username;
   @JsonKey(name: 'is_private')
   bool isPrivate;
   @JsonKey(name: 'is_verified')
@@ -23,9 +24,10 @@ class User {
   // bool edgeOwnerToTimelineMedia;
   User({
     this.biography,
-    // this.edgeFollow,
-    // this.edgeFollowedBy,
+    this.edgeFollow,
+    this.edgeFollowedBy,
     this.externalUrl,
+    this.username,
     this.fullName,
     this.isPrivate,
     this.isVerified,
@@ -35,4 +37,26 @@ class User {
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
   Map<String, dynamic> toJson() => _$UserToJson(this);
+}
+
+@JsonSerializable()
+class EdgeFollowedBy {
+  int count;
+
+  EdgeFollowedBy({this.count});
+
+  factory EdgeFollowedBy.fromJson(Map<String, dynamic> json) =>
+      _$EdgeFollowedByFromJson(json);
+  Map<String, dynamic> toJson() => _$EdgeFollowedByToJson(this);
+}
+
+@JsonSerializable()
+class EdgeFollow {
+  int count;
+
+  EdgeFollow({this.count});
+
+  factory EdgeFollow.fromJson(Map<String, dynamic> json) =>
+      _$EdgeFollowFromJson(json);
+  Map<String, dynamic> toJson() => _$EdgeFollowToJson(this);
 }
