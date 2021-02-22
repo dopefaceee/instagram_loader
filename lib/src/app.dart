@@ -11,6 +11,7 @@ class App extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xFF23242e),
         ),
         home: HomePage(),
+        initialRoute: '/',
       ),
     );
   }

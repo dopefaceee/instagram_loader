@@ -80,7 +80,9 @@ class InfoCardSuccess extends StatelessWidget {
                     Icons.stacked_bar_chart,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/information');
+                  },
                 ),
                 IconButton(
                   iconSize: 40,
@@ -88,7 +90,9 @@ class InfoCardSuccess extends StatelessWidget {
                     Icons.monetization_on,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/worth');
+                  },
                 ),
                 IconButton(
                   iconSize: 40,

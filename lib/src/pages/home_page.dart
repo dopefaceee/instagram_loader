@@ -91,7 +91,7 @@ class HomePage extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'poppins',
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'poppins',
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontFamily: 'poppins',
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.w400),
                                       ),
                                     ),
@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'poppins',
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -150,7 +150,7 @@ class HomePage extends StatelessWidget {
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontFamily: 'poppins',
-                                    fontSize: 16,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.w400),
                               ),
                             ),
